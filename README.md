@@ -55,8 +55,8 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 ## 2. Create a project and add services
 
 * In Watson Studio create a new project which will contain the notebook and connections to the IBM Cloud services.
-* Associate the project with an Apache Spark service instance. Go to Settings and scroll down to Associated Services. Click + and select **Spark** from the drop-down menu. Select an existing service or create a new one for free. 
-* Also add Watson Machine Learning to the project from the same drop-down menu. Click + and select **Watson** from the drop-down menu. Select an existing Watson Machine Learning service or create a new one for free. 
+* Associate the project with an Apache Spark service instance. Go to `Settings` and scroll down to `Associated Services`. Click + and select **Spark** from the drop-down menu. Select an existing service or create a new one for free. 
+* Also add Watson Machine Learning to the project from the same drop-down menu. Click `+` and select `Watson` from the drop-down menu. Select an existing Watson Machine Learning service or create a new one for free. 
  
  ![](doc/source/images/add_spark.png)
 
@@ -75,7 +75,7 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 ## 4. Load customer data in the notebook
 
 * Run the cells one at a time. Select the cell, and then press the `Play` button in the toolbar.
-* Make sure the latest version on PixieDust is installed. If you get a warning  run this code in a new cell: `pip install --user --upgrade pixiedust`.
+* Make sure the latest version on PixieDust is installed. If you get a warning run this code in a new cell: `pip install --user --upgrade pixiedust`.
 * Load the data into the notebook and view the data in a table with `display()`.
 * Prepare the data and create a k-means model with [Spark ML](http://spark.apache.org/docs/2.0.0/api/python/pyspark.ml.html). This model associates every customer to a cluster based on their shopping history.
     
@@ -85,7 +85,7 @@ To access the machine learning service programmatically, you need to copy in you
 
 * Open your [IBM Cloud Data Services list](https://apsportal.ibm.com/settings/services?context=analytics). A list of your provisioned services is displayed.
 * Locate your **IBM Watson Machine Learning** service and click on the service instance name.
-* Open the _Service Credentials_ tab and view the credentials.
+* Open the `Service Credentials` tab and view the credentials.
 * Copy your credentials and replace the `**USERNAME**`, `**PASSWORD**` and `**INSTANCE_ID**` placeholders in the notebook and run the cell.
 
 ## 6. Deploy the model to the Cloud and run the product recommendation PixieApp
