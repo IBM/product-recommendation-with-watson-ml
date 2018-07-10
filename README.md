@@ -12,8 +12,9 @@ The intended audience is data scientists and developers interested in building, 
 
 ## Flow
 
-[](flow.png)
+![](doc/source/images/pattern-architecture-diagram.png)
 
+1. Log in to IBM Watson Studio
 1. Load the provided notebook into Watson Studio
 1. Load and transform the customer data in the notebook
 1. Build a k-means clustering model with SparkML 
