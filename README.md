@@ -42,103 +42,74 @@ The intended audience is data scientists and developers interested in building, 
 Follow these steps to setup and run this code pattern. The steps are described in detail below.
 
 1. [Sign up for Watson Studio](#1-sign-up-for-watson-studio)
-2. [Create a Project](#2-create-a-project)
-1. [Create IBM Cloud services](#3-create-ibm-cloud-services)
-1. [Create the notebook](#4-create-the-notebook)
-1. [Update the notebook with service credentials](#5-update-the-notebook-with-service-credentials)
-1. [Run the notebook](#6-run-the-notebook)
-1. [Build and run the recommendation PixieApp](#7-build-the-pixieapp)
+1. [Create a project](#2-create-a-project)
+1. [Create a notebook](#3-create-the-notebook)
+1. [Load customer data in the notebook](#4-load-customer-data)
+1. [Add a Watson Machine Learning service](#5-add-watson-machine-learning)
+1. [Build and run the recommendation PixieApp](#6-build-the-pixieapp)
 
 ## 1. Sign up for Watson Studio
 
-Sign up for IBM's [Watson Studio](https://dataplatform.ibm.com). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account. Take note of your service names as you will need to select them in the following steps.
+Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account.
 
-> Note: When creating your Object Storage service, select the ``Free`` storage type in order to avoid having to pay an upgrade fee.
+## 2. Create a project and add services
 
-## 2. Create a project
+* In Watson Studio create a new project which will contain the notebook and connections to the IBM Cloud services.
+* Associate the project with an Apache Spark service instance. Go to Settings and scroll down to Associated Services. Click + and select **Spark** from the drop-down menu. Select an existing service or create a new one for free. 
+* Also add Watson Machine Learning to the project from the same drop-down menu. Click + and select **Watson** from the drop-down menu. Select an existing Watson Machine Learning service or create a new one for free. 
+ 
+ ![](doc/source/images/add_spark.png)
 
-In Watson Studio create a new project which will contain the notebook and connections to the IBM Cloud services.
+## 3. Create a notebook
 
-## 3. Create IBM Cloud services
-
-Create the following IBM Cloud services:
-
-* [**Watson Machine Learning**](https://console.bluemix.net/catalog/services/natural-language-understanding)
-* [**Spark**](https://console.bluemix.net/catalog/services/natural-language-understanding)
-* https://github.com/IBM/pixiedust-traffic-analysis/blob/master/doc/source/images/createSparkService.png
-
-## 4. Create the notebook
-
-* In [Watson Studio](https://dataplatform.ibm.com), click on `Create notebook` to create a notebook.
-* Create a project if necessary, provisioning an object storage service if required.
 * In the `Assets` tab, select the `Create notebook` option.
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
-* Enter this Notebook URL: https://github.com/IBM/watson-document-co-relation/blob/master/notebooks/watson_correlate_documents.ipynb
-* Select the **Spark** runtime.
+* Enter this Notebook URL: https://raw.githubusercontent.com/IBM/product-recommendation-with-watson-ml/product-recommendation-wml/notebooks/wml-product-recommendation-engine.ipynb
+* Make sure you select Spark as your runtime. 
 * Click the `Create` button.
 
-## 5. Update the notebook with service credentials
+![](doc/source/images/new_notebook.png)
 
-#### Add the Watson Machine Learning credentials to the notebook
-Select the cell below `2.1 Add your service credentials from IBM Cloud for the Watson services` section in the notebook to update the credentials for Watson Natural Language Understanding. 
+## 4. Load customer data in the notebook
 
-Open the Watson Natural Language Understanding service in your [IBM Cloud Dashboard](https://console.bluemix.net/dashboard/services) and click on your service, which you should have named `wdc-NLU-service`.
+* Run the cells one at a time. Select the cell, and then press the `Play` button in the toolbar.
+* Make sure the latest version on PixieDust is installed. If you get a warning  run this code in a new cell: `pip install --user --upgrade pixiedust`.
+* Load the data into the notebook and view the data in a table with `display()`.
+* Prepare the data and create a k-means model with [Spark ML](http://spark.apache.org/docs/2.0.0/api/python/pyspark.ml.html). This model associates every customer to a cluster based on their shopping history.
+    
+## 5. Add the Watson Machine Learning credentials to the notebook
 
-Once the service is open click the `Service Credentials` menu on the left.
+To access the machine learning service programmatically, you need to copy in your credentials, which you can find in your IBM Watson Machine Learning service details in IBM Cloud.
 
-![](doc/source/images/service_credentials.png)
+* Open your [IBM Cloud Data Services list](https://apsportal.ibm.com/settings/services?context=analytics). A list of your provisioned services is displayed.
+* Locate your **IBM Watson Machine Learning** service and click on the service instance name.
+* Open the _Service Credentials_ tab and view the credentials.
+* Copy your credentials and replace the `**USERNAME**`, `**PASSWORD**` and `**INSTANCE_ID**` placeholders in the notebook and run the cell.
 
-In the `Service Credentials` that opens up in the UI, select whichever `Credentials` you would like to use in the notebook from the `KEY NAME` column. Click `View credentials` and copy `username` and `password` key values that appear on the UI in JSON format.
+## 6. Deploy the model to the Cloud and run the product recommendation PixieApp
 
-![](doc/source/images/copy_credentials.png)
+The last part of the notebook will walk you through the following steps:
 
-Update the `username` and `password` key values in the cell below `2.1 Add your service credentials from IBM Cloud for the Watson services` section.
+* Deploy the model to the cloud by using the [Watson Machine Learning REST API](http://watson-ml-api.mybluemix.net/) and test the deployment of the model.
+* Create product recommendations with functions that query the database to find the most popular items for a cluster and calculate the recommendations based on a given cluster. This produces a list of recommended items based on the products and quantities in a user's cart, which uses Watson Machine Learning to calculate the cluster based on the shopping cart contents.
+* These functions can now be used in a PixieApp to create an interactive dashboard.
 
-![](doc/source/images/watson_nlu_credentials.png)
-
-## 6. Run the notebook
-
-When a notebook is executed, what is actually happening is that each code cell in
-the notebook is executed, in order, from top to bottom.
-
-> IMPORTANT: The first time you run your notebook, you will need to install the necessary
-packages in section 1.1 and then `Restart the kernel`.
-
-Each code cell is selectable and is preceded by a tag in the left margin. The tag
-format is `In [x]:`. Depending on the state of the notebook, the `x` can be:
-
-* A blank, this indicates that the cell has never been executed.
-* A number, this number represents the relative order this code step was executed.
-* A `*`, this indicates that the cell is currently executing.
-
-There are several ways to execute the code cells in your notebook:
-
-* One cell at a time.
-  * Select the cell, and then press the `Play` button in the toolbar.
-* Batch mode, in sequential order.
-  * From the `Cell` menu bar, there are several options available. For example, you
-    can `Run All` cells in your notebook, or you can `Run All Below`, that will
-    start executing from the first cell under the currently selected cell, and then
-    continue executing all cells that follow.
-* At a scheduled time.
-  * Press the `Schedule` button located in the top right section of your notebook
-    panel. Here you can schedule your notebook to be executed once at some future
-    time, or repeatedly at your specified interval.
-
-## 7. Build and run the recommendation PixieApp
-
+![](doc/source/images/product_recommendation_app.png)
 
 # Other scenarios and use cases for which a solution can be built using the above methodology
 
-[See USECASES.md.](USECASES.md)
 
 # Related links
 
-[Mine insights from software development artifacts](https://developer.ibm.com/code/patterns/mine-insights-from-software-development-artifacts/)
+[Build a recommender with Apache Spark and Elasticsearch](https://developer.ibm.com/code/patterns/build-a-recommender-with-apache-spark-and-elasticsearch/)
 
-[Get insights on personal finance data](https://developer.ibm.com/code/?p=29292&preview=true)
+[Create a web-based mobile health app using Watson services on IBM Cloud and IBM Watson Studio](https://developer.ibm.com/code/patterns/develop-web-based-mobile-health-app-uses-machine-learning/)
+
+[Use machine learning to predict U.S. opioid prescribers with Watson Studio and scikit-learn](https://developer.ibm.com/code/patterns/analyze-open-medical-data-sets-to-gain-insights/)
+
+
 
 # Troubleshooting
 
