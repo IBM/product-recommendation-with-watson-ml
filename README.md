@@ -55,8 +55,8 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 ## 2. Create a project and add services
 
 * In Watson Studio create a new project which will contain the notebook and connections to the IBM Cloud services.
-* Associate the project with an Apache Spark service instance. Go to `Settings` and scroll down to `Associated Services`. Click + and select **Spark** from the drop-down menu. Select an existing service or create a new one for free. 
-* Also add Watson Machine Learning to the project from the same drop-down menu. Click `+` and select `Watson` from the drop-down menu. Select an existing Watson Machine Learning service or create a new one for free. 
+* Associate the project with an Apache Spark service instance. Go to `Settings` and scroll down to `Associated Services`. Click + and select `Spark` from the drop-down menu. Select an existing service or create a new one for free. 
+* Also add Watson Machine Learning to the project from the same drop-down menu. Click `+` and select `Watson` from the drop-down menu. Select an existing `Watson Machine Learning` service or create a new one for free. 
  
  ![](doc/source/images/add_spark.png)
 
@@ -67,7 +67,7 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
 * Enter this Notebook URL: https://raw.githubusercontent.com/IBM/product-recommendation-with-watson-ml/product-recommendation-wml/notebooks/wml-product-recommendation-engine.ipynb
-* Make sure you select Spark as your runtime. 
+* Make sure you select `Spark` as your runtime. 
 * Click the `Create` button.
 
 ![](doc/source/images/new_notebook.png)
@@ -109,8 +109,6 @@ The last part of the notebook will walk you through the following steps:
 
 [Use machine learning to predict U.S. opioid prescribers with Watson Studio and scikit-learn](https://developer.ibm.com/code/patterns/analyze-open-medical-data-sets-to-gain-insights/)
 
-
-
 # Troubleshooting
 
 [See DEBUGGING.md.](DEBUGGING.md)
@@ -118,5 +116,3 @@ The last part of the notebook will walk you through the following steps:
 # License
 
 [Apache 2.0](LICENSE)
-
-
