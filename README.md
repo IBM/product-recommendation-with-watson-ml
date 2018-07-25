@@ -31,8 +31,8 @@ The intended audience is data scientists and developers interested in building, 
 ## Featured Technologies
 
 * [Jupyter notebooks](http://jupyter.org/): an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text
-* [PixieDust](https://github.com/ibm-cds-labs/pixiedust): Python helper library for Jupyter notebooks
-* [PixieApps](https://ibm-cds-labs.github.io/pixiedust/pixieapps.html): Python library to write and run UI elements for analytics directly in a Jupyter notebook
+* [PixieDust](https://pixiedust.github.io/pixiedust/): Python helper library for Jupyter notebooks
+* [PixieApps](https://pixiedust.github.io/pixiedust/pixieapps.html): Python library to write and run UI elements for analytics directly in a Jupyter notebook
 
 # Watch the video
 
@@ -55,14 +55,14 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 ## 2. Create a project and add services
 
 * In Watson Studio create a new project which will contain the notebook and connections to the IBM Cloud services.
-* Associate the project with an Apache Spark service instance. Go to `Settings` and scroll down to `Associated Services`. Click + and select `Spark` from the drop-down menu. Select an existing service or create a new one for free. 
+* Associate the project with an Apache Spark service instance. Go to `Settings` tab in the new Project and scroll down to `Associated Services`. Click + and select `Spark` from the drop-down menu. Select an existing service or create a new one for free. 
 * Also add Watson Machine Learning to the project from the same drop-down menu. Click `+` and select `Watson` from the drop-down menu. Select an existing `Watson Machine Learning` service or create a new one for free. 
  
  ![](doc/source/images/add_spark.png)
 
 ## 3. Create a notebook
 
-* In the `Assets` tab, select the `Create notebook` option.
+* In the `Assets` tab of the new project, select the `Create notebook` option.
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
@@ -86,7 +86,7 @@ To access the machine learning service programmatically, you need to copy in you
 * Open your [IBM Cloud Data Services list](https://apsportal.ibm.com/settings/services?context=analytics). A list of your provisioned services is displayed.
 * Locate your **IBM Watson Machine Learning** service and click on the service instance name.
 * Open the `Service Credentials` tab and view the credentials.
-* Copy your credentials and replace the `**USERNAME**`, `**PASSWORD**` and `**INSTANCE_ID**` placeholders in the notebook and run the cell.
+* Copy your credentials and replace the `**URL**`, `**USERNAME**`, `**PASSWORD**` and `**INSTANCE_ID**` placeholders in the notebook and run the cell.
 
 ## 6. Deploy the model to the Cloud and run the product recommendation PixieApp
 
