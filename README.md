@@ -34,7 +34,9 @@ The intended audience is data scientists and developers interested in building, 
 * [PixieDust](https://pixiedust.github.io/pixiedust/): Python helper library for Jupyter notebooks
 * [PixieApps](https://pixiedust.github.io/pixiedust/pixieapps.html): Python library to write and run UI elements for analytics directly in a Jupyter notebook
 
+<!--
 # Watch the video
+-->
 
 
 # Steps
@@ -54,7 +56,7 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 
 ## 2. Create a project and add services
 
-* In Watson Studio create a new project which will contain the notebook and connections to the IBM Cloud services.
+* In Watson Studio create a new project which will contain the notebook and connections to the IBM Cloud services. Choose the `Data Science` project tile.
 * Associate the project with an Apache Spark service instance. Go to `Settings` tab in the new Project and scroll down to `Associated Services`. Click + and select `Spark` from the drop-down menu. Select an existing service or create a new one for free.
 * Also add Watson Machine Learning to the project from the same drop-down menu. Click `+` and select `Watson` from the drop-down menu. Select an existing `Watson Machine Learning` service or create a new one for free.
 
@@ -62,7 +64,7 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 
 ## 3. Create a notebook
 
-* In the `Assets` tab of the new project, select the `Create notebook` option.
+* In the `Assets` tab of the new project, select `Notebooks` -> `+ New notebook` OR select `+ Add to project` -> `Notebook`.
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
@@ -74,10 +76,9 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 
 ## 4. Load customer data in the notebook
 
-* Run the cells one at a time. Select the cell, and then press the `Play` button in the toolbar.
-* Make sure the latest version on PixieDust is installed. If you get a warning run this code in a new cell: `pip install --user --upgrade pixiedust`.
-* Load the data into the notebook and view the data in a table with `display()`.
-* Prepare the data and create a k-means model with [Spark ML](http://spark.apache.org/docs/2.0.0/api/python/pyspark.ml.html). This model associates every customer to a cluster based on their shopping history.
+* Run the cells one at a time. Select the cell, and then press the `Run` button ![](https://github.com/IBM/pattern-images/blob/master/watson-studio/NotebookRunCellButton.png) in the toolbar.
+* You will load the data into the notebook in cell `1.1. Load sample data` and view it when running PixieDust `display()` in cell `1.3 View data in a table by using Pixiedust`.
+* Prepare the data and create a k-means model with [Spark ML](http://spark.apache.org/docs/2.0.0/api/python/pyspark.ml.html) by running the cells under `2. Create a k-means model`. This model associates every customer to a cluster based on their shopping history.
 
 ## 5. Add the Watson Machine Learning credentials to the notebook
 
@@ -92,14 +93,11 @@ To access the machine learning service programmatically, you need to copy in you
 
 The last part of the notebook will walk you through the following steps:
 
-* Deploy the model to the cloud by using the [Watson Machine Learning REST API](http://watson-ml-api.mybluemix.net/) and test the deployment of the model.
-* Create product recommendations with functions that query the database to find the most popular items for a cluster and calculate the recommendations based on a given cluster. This produces a list of recommended items based on the products and quantities in a user's cart, which uses Watson Machine Learning to calculate the cluster based on the shopping cart contents.
-* These functions can now be used in a PixieApp to create an interactive dashboard.
+* Section `4. Deploy model to the cloud` by using the [Watson Machine Learning REST API](http://watson-ml-api.mybluemix.net/) and test the deployment of the model.
+* Section `5. Create product recommendations` with functions that query the database to find the most popular items for a cluster and calculate the recommendations based on a given cluster. This produces a list of recommended items based on the products and quantities in a user's cart, which uses Watson Machine Learning to calculate the cluster based on the shopping cart contents.
+* Section `5.1 Test product recommendations model`. These functions can now be used in a PixieApp to create an interactive dashboard.
 
 ![](doc/source/images/product_recommendation_app.png)
-
-# Other scenarios and use cases for which a solution can be built using the above methodology
-
 
 # Related links
 
@@ -108,10 +106,6 @@ The last part of the notebook will walk you through the following steps:
 [Create a web-based mobile health app using Watson services on IBM Cloud and IBM Watson Studio](https://developer.ibm.com/code/patterns/develop-web-based-mobile-health-app-uses-machine-learning/)
 
 [Use machine learning to predict U.S. opioid prescribers with Watson Studio and scikit-learn](https://developer.ibm.com/code/patterns/analyze-open-medical-data-sets-to-gain-insights/)
-
-# Troubleshooting
-
-[See DEBUGGING.md.](DEBUGGING.md)
 
 # License
 
