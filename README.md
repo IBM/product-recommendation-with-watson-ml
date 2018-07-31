@@ -1,6 +1,6 @@
 # Build a product recommendation engine with Watson Machine Learning and PixieApps
 
-In this code pattern historical shopping data is used to build a recommendation engine with Spark and Watson Machine Learning. The model is then used in an interactive PixieApp in which a shopping basket is simulated and used to create a list of recommendations. 
+In this code pattern historical shopping data is used to build a recommendation engine with Spark and Watson Machine Learning. The model is then used in an interactive PixieApp in which a shopping basket is simulated and used to create a list of recommendations.
 
 When you have completed this code patterns, you will understand how to:
 
@@ -17,10 +17,10 @@ The intended audience is data scientists and developers interested in building, 
 1. Log in to IBM Watson Studio
 1. Load the provided notebook into Watson Studio
 1. Load and transform the customer data in the notebook
-1. Build a k-means clustering model with SparkML 
-1. Deploy the model to Watson Machine Learning 
+1. Build a k-means clustering model with SparkML
+1. Deploy the model to Watson Machine Learning
 1. Test and compare the models build in the notebook and through the Watson Machine Learning API
-1. Use the API to build an interactive PixieApp 
+1. Use the API to build an interactive PixieApp
 
 ## Included Components
 
@@ -55,9 +55,9 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 ## 2. Create a project and add services
 
 * In Watson Studio create a new project which will contain the notebook and connections to the IBM Cloud services.
-* Associate the project with an Apache Spark service instance. Go to `Settings` tab in the new Project and scroll down to `Associated Services`. Click + and select `Spark` from the drop-down menu. Select an existing service or create a new one for free. 
-* Also add Watson Machine Learning to the project from the same drop-down menu. Click `+` and select `Watson` from the drop-down menu. Select an existing `Watson Machine Learning` service or create a new one for free. 
- 
+* Associate the project with an Apache Spark service instance. Go to `Settings` tab in the new Project and scroll down to `Associated Services`. Click + and select `Spark` from the drop-down menu. Select an existing service or create a new one for free.
+* Also add Watson Machine Learning to the project from the same drop-down menu. Click `+` and select `Watson` from the drop-down menu. Select an existing `Watson Machine Learning` service or create a new one for free.
+
  ![](doc/source/images/add_spark.png)
 
 ## 3. Create a notebook
@@ -66,8 +66,8 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 * Select the `From URL` tab.
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
-* Enter this Notebook URL: https://raw.githubusercontent.com/IBM/product-recommendation-with-watson-ml/product-recommendation-wml/notebooks/wml-product-recommendation-engine.ipynb
-* Make sure you select `Spark` as your runtime. 
+* Enter this Notebook URL: https://raw.githubusercontent.com/IBM/product-recommendation-with-watson-ml/master/notebooks/wml-product-recommendation-engine.ipynb
+* Make sure you select `Spark` as your runtime.
 * Click the `Create` button.
 
 ![](doc/source/images/new_notebook.png)
@@ -78,7 +78,7 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 * Make sure the latest version on PixieDust is installed. If you get a warning run this code in a new cell: `pip install --user --upgrade pixiedust`.
 * Load the data into the notebook and view the data in a table with `display()`.
 * Prepare the data and create a k-means model with [Spark ML](http://spark.apache.org/docs/2.0.0/api/python/pyspark.ml.html). This model associates every customer to a cluster based on their shopping history.
-    
+
 ## 5. Add the Watson Machine Learning credentials to the notebook
 
 To access the machine learning service programmatically, you need to copy in your credentials, which you can find in your IBM Watson Machine Learning service details in IBM Cloud.
