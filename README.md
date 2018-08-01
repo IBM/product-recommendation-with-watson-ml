@@ -76,7 +76,7 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 
 ## 4. Load customer data in the notebook
 
-* Run the cells one at a time. Select the cell, and then press the `> Run` button in the toolbar.
+* Run the cells one at a time. Select the cell, and then press the &#9654;`Run` button in the toolbar.
 * You will load the data into the notebook in cell `1.1. Load sample data` and view it when running PixieDust `display()` in cell `1.3 View data in a table by using Pixiedust`.
 * Prepare the data and create a k-means model with [Spark ML](http://spark.apache.org/docs/2.0.0/api/python/pyspark.ml.html) by running the cells under `2. Create a k-means model`. This model associates every customer to a cluster based on their shopping history.
 
