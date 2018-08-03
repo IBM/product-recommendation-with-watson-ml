@@ -6,7 +6,7 @@ When you have completed this code patterns, you will understand how to:
 
 * Use [Jupyter Notebooks](http://jupyter.org/) in [IBM Watson Studio](https://dataplatform.ibm.com/)
 * Build a recommendation model with SparkML and Watson Machine Learning to provide product recommendations for customers based on their purchase history
-* Build an interactive dashboard using [PixieApps](https://ibm-watson-data-lab.github.io/pixiedust/pixieapps.html)
+* Build an interactive dashboard using [PixieApps](https://pixiedust.github.io/pixiedust/pixieapps.html)
 
 The intended audience is data scientists and developers interested in building, deploying and testing machine learning models from a Jupyter notebook with Watson Machine Learning.
 
