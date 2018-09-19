@@ -4,7 +4,7 @@ In this code pattern historical shopping data is used to build a recommendation 
 
 When you have completed this code patterns, you will understand how to:
 
-* Use [Jupyter Notebooks](http://jupyter.org/) in [IBM Watson Studio](https://dataplatform.ibm.com/)
+* Use [Jupyter Notebooks](http://jupyter.org/) in [IBM Watson Studio](https://dataplatform.cloud.ibm.com/)
 * Build a recommendation model with SparkML and Watson Machine Learning to provide product recommendations for customers based on their purchase history
 * Build an interactive dashboard using [PixieApps](https://pixiedust.github.io/pixiedust/pixieapps.html)
 
@@ -57,7 +57,7 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 ## 2. Create a project and add services
 
 * In Watson Studio create a new project which will contain the notebook and connections to the IBM Cloud services. Choose the `Data Science` project tile.
-* Associate the project with an Apache Spark service instance. Go to `Settings` tab in the new Project and scroll down to `Associated Services`. Click + and select `Spark` from the drop-down menu. Select an existing service or create a new one for free.
+* Associate the project with an Apache Spark service instance. Go to `Settings` tab in the new Project and scroll down to `Associated Services`. Click `+` and select `Spark` from the drop-down menu. Select an existing service or create a new one for free.
 * Also add Watson Machine Learning to the project from the same drop-down menu. Click `+` and select `Watson` from the drop-down menu. Select an existing `Watson Machine Learning` service or create a new one for free.
 
  ![](doc/source/images/add_spark.png)
