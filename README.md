@@ -93,7 +93,7 @@ To access the machine learning service programmatically, you need to copy in you
 
 The last part of the notebook will walk you through the following steps:
 
-* Section `4. Deploy model to the cloud` by using the [Watson Machine Learning REST API](http://watson-ml-api.mybluemix.net/) and test the deployment of the model.
+* Section `4. Deploy model to the cloud` by using the [Watson Machine Learning Python client library](http://wml-api-pyclient.mybluemix.net/) and test the deployment of the model.
 * Section `5. Create product recommendations` with functions that query the database to find the most popular items for a cluster and calculate the recommendations based on a given cluster. This produces a list of recommended items based on the products and quantities in a user's cart, which uses Watson Machine Learning to calculate the cluster based on the shopping cart contents.
 * Section `5.1 Test product recommendations model`. These functions can now be used in a PixieApp to create an interactive dashboard.
 
