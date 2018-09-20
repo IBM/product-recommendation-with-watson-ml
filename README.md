@@ -44,7 +44,7 @@ The intended audience is data scientists and developers interested in building, 
 Follow these steps to setup and run this code pattern. The steps are described in detail below.
 
 1. [Sign up for Watson Studio](#1-sign-up-for-watson-studio)
-1. [Create a project](#2-create-a-project)
+1. [Create a project and add services](#2-create-a-project-and-add-services)
 1. [Create a notebook](#3-create-the-notebook)
 1. [Load customer data in the notebook](#4-load-customer-data)
 1. [Add a Watson Machine Learning service](#5-add-watson-machine-learning)
@@ -58,6 +58,9 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 
 * In Watson Studio create a new project which will contain the notebook and connections to the IBM Cloud services. Choose the `Data Science` project tile.
 * Associate the project with an Apache Spark service instance. Go to `Settings` tab in the new Project and scroll down to `Associated Services`. Click `+` and select `Spark` from the drop-down menu. Select an existing service or create a new one for free.
+
+> Note: This notebook will work with Python 3.x. You cannot use Python 2.x
+
 * Also add Watson Machine Learning to the project from the same drop-down menu. Click `+` and select `Watson` from the drop-down menu. Select an existing `Watson Machine Learning` service or create a new one for free.
 
  ![](doc/source/images/add_spark.png)
@@ -69,7 +72,7 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
 * Enter this Notebook URL: https://raw.githubusercontent.com/IBM/product-recommendation-with-watson-ml/master/notebooks/wml-product-recommendation-engine.ipynb
-* Make sure you select `Spark` as your runtime.
+* Make sure you select the Spark service you associated with the project as your runtime.
 * Click the `Create` button.
 
 ![](doc/source/images/new_notebook.png)
