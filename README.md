@@ -12,7 +12,7 @@ The intended audience is data scientists and developers interested in building, 
 
 ## Flow
 
-![](doc/source/images/pattern-architecture-diagram.png)
+![](doc/source/images/architecture.png)
 
 1. Log in to IBM Watson Studio
 1. Load the provided notebook into Watson Studio
