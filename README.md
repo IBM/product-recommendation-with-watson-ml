@@ -24,9 +24,9 @@ The intended audience is data scientists and developers interested in building, 
 
 ## Included Components
 
-* [IBM Watson Studio](https://console.bluemix.net/catalog/services/watson-studio): a suite of tools and a collaborative environment for data scientists, developers and domain experts
-* [IBM Apache Spark](https://console.ng.bluemix.net/catalog/services/apache-spark): an open source cluster computing framework optimized for extremely fast and large scale data processing
-* [IBM Watson Machine Learning](https://console.bluemix.net/catalog/services/machine-learning): a set of REST APIs to develop applications that make smarter decisions, solve tough problems, and improve user outcomes
+* [IBM Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio): a suite of tools and a collaborative environment for data scientists, developers and domain experts
+* [IBM Apache Spark](https://cloud.ibm.com/catalog/services/apache-spark): an open source cluster computing framework optimized for extremely fast and large scale data processing
+* [IBM Watson Machine Learning](https://cloud.ibm.com/catalog/services/machine-learning): a set of REST APIs to develop applications that make smarter decisions, solve tough problems, and improve user outcomes
 
 ## Featured Technologies
 
