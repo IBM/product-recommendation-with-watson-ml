@@ -92,7 +92,7 @@ To access the machine learning service programmatically, you need to copy in you
 * Open the `Service Credentials` tab and view the credentials.
 * Copy your credentials and replace the `**URL**`, `**USERNAME**`, `**PASSWORD**` and `**INSTANCE_ID**` placeholders in the notebook and run the cell.
 
-### 6. Deploy the model to the Cloud and run the product recommendation PixieApp
+## 6. Deploy the model to the Cloud and run the product recommendation PixieApp
 
 The last part of the notebook will walk you through the following steps:
 
