@@ -47,7 +47,7 @@ Follow these steps to setup and run this code pattern. The steps are described i
 1. [Create a project and add services](#2-create-a-project-and-add-services)
 1. [Create a notebook](#3-create-a-notebook)
 1. [Load customer data in the notebook](#4-load-customer-data-in-the-notebook)
-1. [Add the Watson Machine Learning credentials to the notebook](#5-add-watson-machine-learning-credentials-to-the-notebook)
+1. [Add the Watson Machine Learning credentials to the notebook](#5-add-the-watson-machine-learning-credentials-to-the-notebook)
 1. [Deploy the model to the Cloud and run the product recommendation PixieApp](#6-deploy-the-model-to-the-cloud-and-run-the-product-recommendation-pixieapp)
 
 ## 1. Sign up for Watson Studio
