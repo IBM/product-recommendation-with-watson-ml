@@ -4,7 +4,7 @@ In this code pattern historical shopping data is used to build a recommendation 
 
 When you have completed this code patterns, you will understand how to:
 
-* Use [Jupyter Notebooks](http://jupyter.org/) in [IBM Watson Studio](https://dataplatform.cloud.ibm.com/)
+* Use [Jupyter Notebooks](https://jupyter.org/) in [IBM Watson Studio](https://dataplatform.cloud.ibm.com/)
 * Build a recommendation model with SparkML and Watson Machine Learning to provide product recommendations for customers based on their purchase history
 * Build an interactive dashboard using [PixieApps](https://pixiedust.github.io/pixiedust/pixieapps.html)
 
@@ -24,13 +24,13 @@ The intended audience is data scientists and developers interested in building, 
 
 ## Included Components
 
-* [IBM Watson Studio](https://console.bluemix.net/catalog/services/watson-studio): a suite of tools and a collaborative environment for data scientists, developers and domain experts
-* [IBM Apache Spark](https://console.ng.bluemix.net/catalog/services/apache-spark): an open source cluster computing framework optimized for extremely fast and large scale data processing
-* [IBM Watson Machine Learning](https://console.bluemix.net/catalog/services/machine-learning): a set of REST APIs to develop applications that make smarter decisions, solve tough problems, and improve user outcomes
+* [IBM Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio): a suite of tools and a collaborative environment for data scientists, developers and domain experts
+* [IBM Apache Spark](https://cloud.ibm.com/catalog/services/apache-spark): an open source cluster computing framework optimized for extremely fast and large scale data processing
+* [IBM Watson Machine Learning](https://cloud.ibm.com/catalog/services/machine-learning): a set of REST APIs to develop applications that make smarter decisions, solve tough problems, and improve user outcomes
 
 ## Featured Technologies
 
-* [Jupyter notebooks](http://jupyter.org/): an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text
+* [Jupyter notebooks](https://jupyter.org/): an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text
 * [PixieDust](https://pixiedust.github.io/pixiedust/): Python helper library for Jupyter notebooks
 * [PixieApps](https://pixiedust.github.io/pixiedust/pixieapps.html): Python library to write and run UI elements for analytics directly in a Jupyter notebook
 
@@ -45,14 +45,14 @@ Follow these steps to setup and run this code pattern. The steps are described i
 
 1. [Sign up for Watson Studio](#1-sign-up-for-watson-studio)
 1. [Create a project and add services](#2-create-a-project-and-add-services)
-1. [Create a notebook](#3-create-the-notebook)
-1. [Load customer data in the notebook](#4-load-customer-data)
-1. [Add a Watson Machine Learning service](#5-add-watson-machine-learning)
-1. [Build and run the recommendation PixieApp](#6-build-the-pixieapp)
+1. [Create a notebook](#3-create-a-notebook)
+1. [Load customer data in the notebook](#4-load-customer-data-in-the-notebook)
+1. [Add the Watson Machine Learning credentials to the notebook](#5-add-the-watson-machine-learning-credentials-to-the-notebook)
+1. [Deploy the model to the Cloud and run the product recommendation PixieApp](#6-deploy-the-model-to-the-cloud-and-run-the-product-recommendation-pixieapp)
 
 ## 1. Sign up for Watson Studio
 
-Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account.
+Sign up for [IBM Watson Studio](https://dataplatform.cloud.ibm.com/). By creating a project in Watson Studio a free tier ``Object Storage`` service will be created in your IBM Cloud account.
 
 ## 2. Create a project and add services
 
@@ -81,7 +81,7 @@ Sign up for [IBM Watson Studio](https://dataplatform.ibm.com). By creating a pro
 
 * Run the cells one at a time. Select the cell, and then press the &#9654;`Run` button in the toolbar.
 * You will load the data into the notebook in cell `1.1. Load sample data` and view it when running PixieDust `display()` in cell `1.3 View data in a table by using Pixiedust`.
-* Prepare the data and create a k-means model with [Spark ML](http://spark.apache.org/docs/2.0.0/api/python/pyspark.ml.html) by running the cells under `2. Create a k-means model`. This model associates every customer to a cluster based on their shopping history.
+* Prepare the data and create a k-means model with [Spark ML](https://spark.apache.org/docs/2.0.0/api/python/pyspark.ml.html) by running the cells under `2. Create a k-means model`. This model associates every customer to a cluster based on their shopping history.
 
 ## 5. Add the Watson Machine Learning credentials to the notebook
 
@@ -96,7 +96,7 @@ To access the machine learning service programmatically, you need to copy in you
 
 The last part of the notebook will walk you through the following steps:
 
-* Section `4. Deploy model to the cloud` by using the [Watson Machine Learning Python client library](http://wml-api-pyclient.mybluemix.net/) and test the deployment of the model.
+* Section `4. Deploy model to the cloud` by using the [Watson Machine Learning Python client library](https://wml-api-pyclient.mybluemix.net/) and test the deployment of the model.
 * Section `5. Create product recommendations` with functions that query the database to find the most popular items for a cluster and calculate the recommendations based on a given cluster. This produces a list of recommended items based on the products and quantities in a user's cart, which uses Watson Machine Learning to calculate the cluster based on the shopping cart contents.
 * Section `5.1 Test product recommendations model`. These functions can now be used in a PixieApp to create an interactive dashboard.
 
@@ -108,14 +108,14 @@ Here we add some products to our cart, and get some recommendations:
 
 # Related links
 
-[Build a recommender with Apache Spark and Elasticsearch](https://developer.ibm.com/code/patterns/build-a-recommender-with-apache-spark-and-elasticsearch/)
+[Build a recommender with Apache Spark and Elasticsearch](https://developer.ibm.com/patterns/build-a-recommender-with-apache-spark-and-elasticsearch/)
 
-[Create a web-based mobile health app using Watson services on IBM Cloud and IBM Watson Studio](https://developer.ibm.com/code/patterns/develop-web-based-mobile-health-app-uses-machine-learning/)
+[Create a web-based mobile health app using Watson services on IBM Cloud and IBM Watson Studio](https://developer.ibm.com/patterns/develop-web-based-mobile-health-app-uses-machine-learning/)
 
-[Use machine learning to predict U.S. opioid prescribers with Watson Studio and scikit-learn](https://developer.ibm.com/code/patterns/analyze-open-medical-data-sets-to-gain-insights/)
+[Use machine learning to predict U.S. opioid prescribers with Watson Studio and scikit-learn](https://developer.ibm.com/patterns/analyze-open-medical-data-sets-to-gain-insights/)
 
 # License
 
-This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](http://www.apache.org/licenses/LICENSE-2.0.txt).
+This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
 
-[Apache Software License (ASL) FAQ](http://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
+[Apache Software License (ASL) FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
