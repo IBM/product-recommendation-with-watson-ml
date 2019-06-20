@@ -58,7 +58,7 @@ To complete this code pattern we'll need to do a few setup steps before creating
 
 * Create a new project by clicking `+ New project` and choosing `Data Science`:
 
-   ![studio project](doc/source/images/studio-project-ds.png)
+  ![studio project](https://raw.githubusercontent.com/IBM/pattern-utils/master/watson-studio/new-project-data-science.png)
 
 * Enter a name for the project name and click `Create`.
 
@@ -68,17 +68,17 @@ To complete this code pattern we'll need to do a few setup steps before creating
 
 * Click on the navigation menu on the left (`☰`) to show additional options. Click on the `Watson Services` option.
 
-   ![add asset](doc/source/images/hamburger-menu-watson.png)
+   ![add asset](https://github.com/IBM/pattern-utils/raw/master/watson-studio/hamburger-menu-watson.png)
 
 * From the overview page, click `+ Add service` on the top right and choose the `Machine Learning` service. Select the `Lite` plan to avoid fees.
 
 * Once provisioned, you should see the service listed in the `Watson Services` overview page. **Select the service by opening the link in a new tab.**  We're now in the IBM Cloud tool, where we will create service credentials for our now Watson Machine Learning service. Follow the numbered steps in the image below. **We'll be using these credentials in Step 2, so keep them handy!**.
 
-   ![wml credentials](doc/source/images/wml-credentials.png)
+   ![wml credentials](https://github.com/IBM/pattern-utils/raw/master/watson-studio/credentials-wml.png)
 
 * **TIP:** You can now go back the project via the navigation menu on the left (`☰`).
 
-   ![add asset](doc/source/images/hamburger-menu-project.png)
+   ![add asset](https://github.com/IBM/pattern-utils/raw/master/watson-studio/hamburger-menu-project.png)
 
 #### 1.3 Create a notebook in Watson Studio
 
@@ -91,7 +91,7 @@ The notebook we'll be using can be viewed in [`notebooks/wml-product-recommendat
   * Under `Notebook URL` provide the following url: [https://github.com/IBM/product-recommendation-with-watson-ml/blob/master/notebooks/wml-product-recommendation-engine.ipynb](https://github.com/IBM/product-recommendation-with-watson-ml/blob/master/notebooks/wml-product-recommendation-engine.ipynb) [3]
   * For `Runtime` select the `Spark Python 3.6` option. [4]
 
-  ![add notebook](doc/source/images/create-spark-notebook.png)
+  ![add notebook](https://github.com/IBM/pattern-utils/raw/master/watson-studio/notebook-create-url-spark-py36.png)
 
 * **TIP:** Once successfully imported, the notebook should appear in the `Notebooks` section of the `Assets` tab.
 
@@ -135,7 +135,7 @@ The gist of the next two steps is to use the [Watson Machine Learning Python cli
 
 Here we add some products to our cart, and get some recommendations:
 
-![](doc/source/images/product_recommendation_app.png)
+![app](doc/source/images/product_recommendation_app.png)
 
 ## License
 
