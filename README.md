@@ -1,20 +1,13 @@
-# Build a product recommendation engine with Watson Machine Learning and PixieApps
+# Build a product recommendation engine with Watson Machine Learning
 
-In this code pattern historical shopping data is used to build a recommendation engine with Spark and Watson Machine Learning. The model is then used in an interactive PixieApp in which a shopping basket is simulated and used to create a list of recommendations.
+In this code pattern historical shopping data is used to build a recommendation engine with Spark and Watson Machine Learning. The model can then used to create a list of recommendations based on contents of a shopping basket.
 
 When you have completed this code patterns, you will understand how to:
 
 * Use [Jupyter Notebooks](https://jupyter.org/) in [IBM Watson Studio](https://dataplatform.cloud.ibm.com/)
 * Build a recommendation model with SparkML and Watson Machine Learning to provide product recommendations for customers based on their purchase history
-* Build an interactive dashboard using [PixieApps](https://pixiedust.github.io/pixiedust/pixieapps.html)
 
 The intended audience is data scientists and developers interested in building, deploying and testing machine learning models from a Jupyter notebook with Watson Machine Learning.
-
-**Sample output**
-
-Here's an example of what the final app looks like
-
-![output](doc/source/images/product_recommendation_app.png)
 
 ## Flow
 
@@ -25,7 +18,6 @@ Here's an example of what the final app looks like
 1. Build a k-means clustering model with SparkML
 1. Deploy the model to Watson Machine Learning
 1. Test and compare the models build in the notebook and through the Watson Machine Learning API
-1. Use the API to build an interactive PixieApp
 
 ## Included Components
 
@@ -33,8 +25,6 @@ Here's an example of what the final app looks like
 * [IBM Apache Spark](https://cloud.ibm.com/catalog/services/apache-spark): an open source cluster computing framework optimized for extremely fast and large scale data processing
 * [IBM Watson Machine Learning](https://cloud.ibm.com/catalog/services/machine-learning): a set of REST APIs to develop applications that make smarter decisions, solve tough problems, and improve user outcomes
 * [Jupyter Notebooks](https://jupyter.org/): an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text
-* [PixieDust](https://pixiedust.github.io/pixiedust/): Python helper library for Jupyter notebooks
-* [PixieApps](https://pixiedust.github.io/pixiedust/pixieapps.html): Python library to write and run UI elements for analytics directly in a Jupyter notebook
 
 ## Steps
 
@@ -46,7 +36,6 @@ Here's an example of what the final app looks like
    * [Start stepping through the notebook](#21-start-stepping-through-the-notebook)
    * [Save the model](#22-save-the-model)
    * [Deploy the model](#23-deploy-the-model)
-1. [Run the recommendation PixieApp](#3-run-the-recommendation-pixieapp)
 
 ### 1. Setup project and data in Watson Studio
 
@@ -105,8 +94,6 @@ Now that we're in our Notebook editor, we can start to create our predictive mod
 
 * Click the &#9654; `Run` button to start stepping through the notebook.
 
-* In cell *2. Load and explore data* we call PixieDust's `display()` method to view the data interactively.
-
 * Keep stepping through the code, pausing on each step to read the code and see the output for the opertion we're performing. At the end of *Step 3* we'll have used the [K-means Clustering](https://spark.apache.org/docs/latest/ml-clustering.html#k-means) algorithm on Spark ML to create a model. This model associates every customer to a cluster based on their shopping history.
 
 #### 2.2 Save the model
@@ -128,14 +115,6 @@ The gist of the next two steps is to use the [Watson Machine Learning Python cli
   ![score-url-in-nb](doc/source/images/score-url-in-nb.png)
 
 * In *Step 6. Create product recommendations* we create functions that query the database to find the most popular items for a cluster and calculate the recommendations based on a given cluster. This produces a list of recommended items based on the products and quantities in a user's cart, which uses Watson Machine Learning to calculate the cluster based on the shopping cart contents.
-
-* Lastly, in *Step 6.1 Test product recommendations model*, these functions can now be used in a PixieApp to create an interactive dashboard.
-
-## Example Output
-
-Here we add some products to our cart, and get some recommendations:
-
-![app](doc/source/images/product_recommendation_app.png)
 
 ## License
 
